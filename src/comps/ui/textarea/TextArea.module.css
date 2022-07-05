@@ -1,0 +1,9 @@
+.TextArea {
+    height: 300px;
+    resize: none;
+    padding: 5px;
+    background: rgb(254, 247, 234);
+    color: rgb(252, 139, 95);
+    border: 2px solid rgb(252, 139, 95);
+    border-radius: 5px;
+}
