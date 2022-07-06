@@ -58,6 +58,7 @@ app.get('/threads', (q,a)=>{
 
 app.get('/getthread', (q,a) => {
     var {id} = q.query;
+    if(+id)
     pool.query(`SELECT 
     id, title, contents, thds.created_on, bumped_on, attach, json_agg(repls) AS replies 
     FROM thds 
@@ -67,7 +68,8 @@ app.get('/getthread', (q,a) => {
     GROUP BY thds.id 
     ORDER BY bumped_on DESC;`, (e,res)=>{
         if(e) console.log(e); else a.json(res.rows[0]);
-    })
+    });
+    else a.end();
 })
 
 app.post('/threads', upload.array('pic'), (q,a)=>{

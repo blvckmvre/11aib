@@ -7,9 +7,9 @@ interface IInitState {
 
 export const modalSlice = createSlice({
     name: 'modal',
-    initialState: <IInitState>{
+    initialState: {
         currentImg: null 
-    },
+    } as IInitState,
     reducers: {
         setCurrentImg(state,action: PayloadAction<IAttach | null>){
             state.currentImg = action.payload

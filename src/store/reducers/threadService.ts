@@ -7,9 +7,12 @@ interface IFetchParams {
     page: number;
 }
 
+const baseUrl =  process.env.REACT_APP_HEROKU ||
+                'http://localhost:3001/';
+
 export const threadAPI = createApi({
     reducerPath: 'threadAPI',
-    baseQuery: fetchBaseQuery({baseUrl: 'http://localhost:3001/'}),
+    baseQuery: fetchBaseQuery({baseUrl}),
     tagTypes: ['thread', 'reply'],
     endpoints(build) {
         return {
