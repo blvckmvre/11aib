@@ -4,4 +4,4 @@ Other dependencies: [react-string-replace](https://www.npmjs.com/package/react-s
 
 <br/>
 
-*This project is now hosted on [Heroku](https://aib11.herokuapp.com/)*
+*This project is now hosted on [Render](https://aib11.onrender.com/)*
